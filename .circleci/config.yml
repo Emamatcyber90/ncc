@@ -10,6 +10,9 @@ jobs:
           name: Installing dependencies
           command: yarn install
       - run:
+          name: Installing asset-relocator-loader dependencies
+          command: cd node_modules/@zeit/webpack-asset-relocator-loader && yarn install
+      - run:
           name: Build unit test binary
           command: yarn build-test-binary
       # - run:
